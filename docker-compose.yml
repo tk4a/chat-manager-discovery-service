@@ -10,6 +10,12 @@ services:
       - "8761:8761"
     networks:
       - spring-cloud-network
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8761/actuator/health" ]
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 2m
 
 networks:
   spring-cloud-network:
