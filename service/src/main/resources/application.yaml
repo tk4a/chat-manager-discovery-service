@@ -10,3 +10,13 @@ eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health

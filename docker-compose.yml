@@ -5,12 +5,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: discovery-service:0.0.2
+    image: discovery-service:latest
     ports:
       - "8761:8761"
-#    networks:
-#      - spring-cloud-network
+    networks:
+      - spring-cloud-network
 
-#networks:
-#  spring-cloud-network:
-#    driver: bridge
+networks:
+  spring-cloud-network:
+    driver: bridge
