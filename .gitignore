@@ -1,4 +1,7 @@
 .gradle
-build/
+build/distributions
+build/kotlin
+build/scripts
+build/tmp
 !gradle/wrapper/gradle-wrapper.jar
 .idea
